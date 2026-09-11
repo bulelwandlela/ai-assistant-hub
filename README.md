@@ -1,118 +1,217 @@
-# AI Assistant Hub
+# AI Workplace Productivity Assistant
 
-Build a modern, responsive SaaS web app called "AI Workplace Productivity Assistant" — a dashboard where professionals automate workplace tasks with AI. No authentication, no sign-up, no backend, no database. All AI responses are simulated client-side with realistic pre-written content. Everything must be fully responsive (mobile, tablet, desktop).
+## Project Overview
 
-DESIGN SYSTEM
+**AI Workplace Productivity Assistant** is a modern, responsive AI-powered productivity web application designed to help professionals simplify and automate common workplace tasks.
 
-- Palette: light pink and white. Background #FFF7FA / #FDF2F8, cards pure white #FFFFFF, primary accent #EC4899, soft pink #F9A8D4, light pink fills #FCE7F3, text #1F2937 headings and #6B7280 body, borders #FBCFE8, success #10B981, warning #F59E0B.
+The application provides three core AI tools:
 
-- Typography: Inter (or Poppins for headings). Consistent sizes: 30px page titles, 18px section headings, 14–15px body, 12–13px labels. No font switching between pages.
+* **Meeting Notes Summarizer** – Converts lengthy meeting notes into concise summaries and extracts important action items, decisions, and deadlines.
+* **AI Task Planner** – Helps users organise and prioritise tasks by generating practical daily or weekly schedules.
+* **AI Research Assistant** – Helps users understand topics and articles by generating summaries, key insights, findings, and recommendations.
 
-- Style: clean, professional, generous whitespace, rounded-2xl cards, soft shadows (0 1px 3px rgba(236,72,153,0.08)), 1px light pink borders, subtle pink gradient hero on the dashboard, pill-shaped buttons, minimal line icons.
+The project focuses on creating a clean, professional SaaS-style experience with an intuitive dashboard and an accessible light-pink and white visual design.
 
-- Components stay identical across all pages: same card style, same button style, same input style, same badge style.
+> **Responsible AI:** AI-generated information may contain errors or inaccuracies. Users should review and verify AI outputs before using them for important workplace decisions.
 
-LAYOUT
+---
 
-- Fixed left sidebar (collapsible on mobile via hamburger, slides in as overlay): logo mark "AI" in a pink rounded square + app name, then nav items — Dashboard, Meeting Notes Summarizer, AI Task Planner, AI Research Assistant. Active item has a light pink background with pink left indicator. Bottom of sidebar: small "Responsible AI" link.
+## Features Implemented
 
-- Top bar: page title, subtle search field, notification bell icon, user avatar placeholder with name "Alex Morgan — Product Manager".
+### 📋 Meeting Notes Summarizer
 
-- Main content area scrolls independently. Sidebar is 260px on desktop, hidden behind a hamburger on mobile.
+* Input area for lengthy meeting notes
+* AI-generated meeting summaries
+* Extraction of:
 
-PAGE 1 — DASHBOARD
+  * Key points
+  * Action items
+  * Decisions
+  * Deadlines
+* Editable AI-generated results
+* Copy, regenerate, and clear functionality
+* Loading and empty states
 
-- Hero greeting: "Good morning, Bulelwa Ndlela" with a one-line subtitle and a pink gradient panel.
+### ✅ AI Task Planner
 
-- Four stat cards with icons and trend badges: Meetings Summarised (24, +12%), Tasks Planned (156, +8%), Research Reports (18, +5%), Hours Saved (32h, +21%).
+* Task input and organisation
+* Priority and deadline considerations
+* Daily and weekly planning
+* AI-powered task prioritisation
+* AI-generated schedules
+* Editable schedules
+* Copy, regenerate, and clear functionality
 
-- "Quick Actions" row: three large clickable cards that route to each tool, each with an icon, title, and one-line description.
+### 🔎 AI Research Assistant
 
-- "Recent Activity" list: 5 items with tool badge, title, timestamp, and a "View" link.
+* Topic, question, or article input
+* AI-generated summaries
+* Key insights and findings
+* Recommendations
+* Editable research results
+* Copy, regenerate, and clear functionality
 
-- "Responsible AI" disclaimer banner (light pink, info icon): "AI outputs may contain errors or omissions. Always review, verify, and edit generated content before using it for business decisions."
+### 📊 Dashboard
 
-PAGE 2 — MEETING NOTES SUMMARIZER
+* Modern SaaS dashboard layout
+* Sidebar navigation
+* Quick-access AI tools
+* Productivity overview
+* Recent activity
+* Quick action buttons
+* Responsive design for desktop, tablet, and mobile
 
-- Two-column layout on desktop (input left, output right), stacked on mobile.
+### 🎨 User Interface
 
-- Input panel: meeting title field, optional attendees field, large textarea for pasting notes, "Load example" text link, and a pink "Summarise Meeting" button with a loading state.
+* Light-pink and white colour palette
+* Consistent modern typography
+* Clean cards and layouts
+* Rounded corners and subtle shadows
+* Professional workplace-oriented design
+* Responsive interface
+* Clear navigation and user feedback states
 
-- Below the button, an expandable "Structured prompt used" section showing the exact prompt template:
+---
 
-  "You are an executive assistant. From the meeting notes below, produce: (1) a 3-sentence executive summary, (2) key discussion points as bullets, (3) decisions made, (4) action items in a table with Owner, Task, Due Date, Priority, (5) open questions and risks. Be concise and factual. Do not invent owners or dates — mark them 'Unassigned' or 'No date' if absent."
+## Technologies and Tools Used
 
-- Output panel (fully editable — contenteditable or editable fields, with an "Editing" indicator): Executive Summary paragraph, Key Discussion Points, Decisions Made, Action Items table, Deadlines, Open Questions & Risks.
+### Frontend
 
-- Action bar on output: Copy, Regenerate, Download, Clear.
+* **HTML5** – Application structure
+* **CSS3** – Styling and responsive layouts
+* **JavaScript / TypeScript** – Application functionality
+* **React** – Component-based user interface
 
-PAGE 3 — AI TASK PLANNER
+### AI
 
-- Input panel: goal/project field, list of tasks (add/remove rows with task name, estimated hours, priority High/Medium/Low, deadline), toggle for Daily or Weekly plan, working hours selector, "Generate Plan" button.
+* **AI-powered structured prompts** – Used to generate summaries, schedules, insights, recommendations, and other productivity outputs.
 
-- Structured prompt shown in an expandable panel:
+### Development & Design Tools
 
-  "You are a productivity coach. Build a realistic daily/weekly schedule from the tasks provided. Prioritise using urgency and impact. Group similar work, protect focus blocks, include breaks, and flag overcommitment. Output: a prioritised task list with priority score and rationale, then a time-blocked schedule."
+* **Lovable** – AI-assisted application development and prototyping
+* **GitHub** – Source code management and project repository
+* **Responsive Web Design** – Desktop, tablet, and mobile support
 
-- Output panel (editable): Priority Matrix (Do First / Schedule / Delegate / Defer), Prioritised Task List with priority scores and reasoning, Time-Blocked Schedule table (time, task, focus type), Workload Insight note, and Recommendations.
+> Technology details can be updated if the final implementation uses a different framework, library, or AI provider.
 
-- Action bar: Copy, Regenerate, Download, Clear.
+---
 
-PAGE 4 — AI RESEARCH ASSISTANT
+## Setup Instructions
 
-- Input panel: research topic or question field, optional paste-article textarea, depth selector (Quick Brief / Standard / Deep Dive), focus area chips (Market, Competitor, Technical, Strategy), "Research Topic" button.
+### 1. Clone the Repository
 
-- Structured prompt shown in expandable panel:
+```bash
+git clone https://github.com/your-username/ai-workplace-productivity-assistant.git
+```
 
-  "You are a business research analyst. Summarise the topic or article below. Provide: a plain-language overview, 5 key insights, opportunities and risks, data points worth noting, recommendations with reasoning, and 3 follow-up questions to explore. Clearly separate facts from interpretation."
+### 2. Navigate to the Project
 
-- Output panel (editable): Overview, Key Insights, Opportunities, Risks & Considerations, Recommendations, Suggested Follow-Up Questions, and a small "Sources & confidence" note reminding the user to verify.
+```bash
+cd ai-workplace-productivity-assistant
+```
 
-- Action bar: Copy, Regenerate, Download, Clear.
+### 3. Install Dependencies
 
-INTERACTION & STATE
+If the project uses Node.js:
 
-- All generated content is mock/simulated: clicking a Generate button shows a 1.5s skeleton loading state, then renders the realistic pre-written sample output for that tool.
+```bash
+npm install
+```
 
-- Every output field is editable inline and changes persist while navigating between pages in the session.
+### 4. Start the Development Server
 
-- Toast notifications ("Summary generated", "Plan copied to clipboard").
-
-- Buttons, badges, cards, tables and empty states all use the same design tokens across pages.
-
-- Empty states show a friendly pink illustration placeholder and "Your results will appear here."
-
-RESPONSIBLE AI
-
-- Disclaimer banner on the Dashboard.
-
-- Persistent footer line on every tool page: "AI-generated content. Review and verify before use. Your data is not stored."
-
-- Small "How we use AI" info tooltip near each generate button explaining limits, bias, and the need for human oversight.
-
-CONTENT
-
-Populate all four pages with realistic, professional example data: a product roadmap meeting for the summarizer, a product launch week for the planner, and an "AI in the workplace 2026" market brief for the research assistant. Write full, believable paragraphs and tables — no lorem ipsum, no placeholder text.
-
-Deliver a polished, production-quality front end that looks like a paid SaaS product.
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/48286594-f298-48c0-8617-433b2c7c1c29).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+```bash
 npm run dev
 ```
+
+### 5. Open the Application
+
+Open the local development URL provided by the development server, commonly:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## Usage
+
+After launching the application:
+
+1. Open the **Dashboard**.
+2. Select an AI productivity tool from the sidebar or dashboard.
+3. Enter the required information.
+4. Submit the request to generate an AI response.
+5. Review the generated output.
+6. Edit, copy, regenerate, or clear the result as required.
+
+---
+
+## Project Structure
+
+A typical project structure is:
+
+```text
+ai-workplace-productivity-assistant/
+│
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── prompts/
+│   └── assets/
+│
+├── public/
+├── README.md
+├── package.json
+└── ...
+```
+
+---
+
+## Project Goals
+
+The project aims to demonstrate how AI can be integrated into everyday professional workflows to:
+
+* Reduce time spent on repetitive administrative tasks
+* Improve task organisation and prioritisation
+* Make workplace information easier to understand
+* Support faster research and decision-making
+* Demonstrate responsible and user-controlled use of AI
+* Provide a professional, accessible and easy-to-use productivity platform
+
+---
+
+## Limitations
+
+This project is designed as a **frontend AI productivity application/prototype**.
+
+* No user registration or sign-up system
+* No login system
+* No traditional backend or database
+* AI outputs should be reviewed by users
+* AI-generated information should not be treated as automatically accurate or authoritative
+
+---
+
+## Team Members
+
+### Project Developer
+
+**Bulelwa Ndlela**
+
+* UI/UX and application concept
+* AI productivity workflow design
+* Feature planning
+* AI prompt design
+* Application development
+* Testing and documentation
+
+---
+
+## License
+
+This project is intended for educational, portfolio, and demonstration purposes.
+
+© 2026 Bulelwa Ndlela. All rights reserved.
+
